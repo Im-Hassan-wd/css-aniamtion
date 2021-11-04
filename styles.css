@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.time {
+  margin-top: 70px;
+}
+
+.time svg {
+  width: 100%;
+}
+
+#nob-1 {
+  animation: nod 1s linear infinite alternate;
+  transform-origin: center;
+}
+
+#nob-2 {
+  animation: nod 1s linear infinite alternate-reverse;
+  transform-origin: center;
+}
+
+#hour-hand {
+  /* animation: rotate 2s linear;
+  transform-box: fill-box; */
+}
+
+#minute-hand {
+  animation: rotate 60s linear infinite;
+  transform-box: fill-box;
+}
+
+#head {
+  animation: move 3s linear alternate infinite;
+  transform-origin: top;
+}
+
+#left-leg {
+  animation: moveLeftLeg 3s linear alternate infinite;
+}
+
+#leaf-1 {
+  animation: rotateLeaf 3s ease-in-out 3s infinite alternate;
+  transform-origin: bottom;
+}
+
+/* alert */
+@keyframes nod {
+  from {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(1deg);
+  }
+}
+
+/* rotate clock hand */
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* hand */
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotateY(10deg);
+  }
+}
+/* leg*/
+@keyframes moveLeftLeg {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes rotateLeaf {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
+}
